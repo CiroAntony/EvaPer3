@@ -244,13 +244,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tipo de Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="unE-Sr-GQY">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destino" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vM-M3-LwJ">
                                         <rect key="frame" x="0.0" y="350" width="382" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="3Bp-Xh-uwo"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="thv-Zz-6r0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDW-1M-GLc">
                                         <rect key="frame" x="0.0" y="410" width="382" height="50"/>
@@ -286,7 +286,7 @@
                         <outlet property="lastNameTextField" destination="Zew-Wb-rZa" id="pGv-cY-ih6"/>
                         <outlet property="nameTextField" destination="aYc-Vn-TJl" id="OFm-k4-IzI"/>
                         <outlet property="passwordTextField" destination="6PK-69-XsT" id="8rZ-EJ-Gs9"/>
-                        <outlet property="tipoTextField" destination="unE-Sr-GQY" id="tYB-dM-Nhh"/>
+                        <outlet property="tipoTextField" destination="4vM-M3-LwJ" id="TUi-9f-3am"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iaN-Yw-dJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

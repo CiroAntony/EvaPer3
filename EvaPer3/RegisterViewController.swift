@@ -16,8 +16,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmTextField: UITextField!
     
     @IBOutlet weak var tipoTextField: UITextField!
-    var selectedTipo: String?
-    var listOfTipos = ["Cliente","Conductor"]
+    var selectedDestino: String?
+    var listOfDestino = ["Dentro de la ciudad","Fuera de la ciudad"]
     
     var db: Firestore!
     
@@ -60,7 +60,7 @@ class RegisterViewController: UIViewController {
             if let correo = emailTextField.text {
                 if let contraseña = passwordTextField.text {
                     if let confirmarContraseña = confirmTextField.text {
-                        if let tipoUsuario = tipoTextField.text {
+                        if let destino = tipoTextField.text {
                             
                             if (contraseña != confirmarContraseña) {
                                 let passAlert = UIAlertController(title: "Aceptar", message: "Error al igualar contraseñas", preferredStyle: .alert)
@@ -95,14 +95,14 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource, 
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.listOfTipos.count
+        return self.listOfDestino.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.listOfTipos[row]
+        return self.listOfDestino[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.selectedTipo = self.listOfTipos[row]
-        self.tipoTextField.text = self.selectedTipo
+        self.selectedDestino = self.listOfDestino[row]
+        self.tipoTextField.text = self.selectedDestino
     }
     
 }
