@@ -24,14 +24,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.crearSelector()
-        self.cerrarSelector()
-        
-        
-        let settings = FirestoreSettings()
-        Firestore.firestore().settings = settings
-        db = Firestore.firestore()
-    }
+        self
     
     func crearSelector(){
         let pickerview = UIPickerView()
