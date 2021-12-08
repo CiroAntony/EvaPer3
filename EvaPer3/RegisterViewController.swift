@@ -15,45 +15,30 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var confirmTextField: UITextField!
     
-    @IBOutlet weak var tipoTextField: UITextField!
-    var selectedDestino: String?
-    var listOfDestino = ["Dentro de la ciudad","Fuera de la ciudad"]
+   // @IBOutlet weak var tipoTextField: UITextField!
+    var selectedTipo: String?
+    var listOfTipos = ["",""]
     
     var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self
-    
-    func crearSelector(){
-        let pickerview = UIPickerView()
-        pickerview.delegate = self
-        pickerview.dataSource = self
-        self.tipoTextField.inputView = pickerview
-    }
-    
-    func cerrarSelector(){
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
         
-        let button = UIBarButtonItem(title: "Seleccionar", style: .plain, target: self, action: #selector(self.dismissAction))
-        toolBar.setItems([button], animated: true)
-        toolBar.isUserInteractionEnabled = true
-        self.tipoTextField.inputAccessoryView = toolBar
-        
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
     }
-    
     @objc func dismissAction(){
         self.view.endEditing(true)
     }
     
     @IBAction func createAccount(_ sender: Any) {
         if let nombres = nameTextField.text {
+            if let apellido = lastNameTextField.text{
             if let correo = emailTextField.text {
                 if let contraseña = passwordTextField.text {
                     if let confirmarContraseña = confirmTextField.text {
-                        if let destino = tipoTextField.text {
                             
                             if (contraseña != confirmarContraseña) {
                                 let passAlert = UIAlertController(title: "Aceptar", message: "Error al igualar contraseñas", preferredStyle: .alert)
@@ -79,8 +64,9 @@ class RegisterViewController: UIViewController {
             }
         }
     }
-    
 }
+    
+
 
 extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -88,14 +74,11 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource, 
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.listOfDestino.count
+        return self.listOfTipos.count
     }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.listOfDestino[row]
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int){
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.selectedDestino = self.listOfDestino[row]
-        self.tipoTextField.text = self.selectedDestino
     }
     
 }

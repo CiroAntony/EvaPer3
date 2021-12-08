@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562A3EB827607D41008B5297 /* MenuGoPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562A3EB727607D41008B5297 /* MenuGoPlaceViewController.swift */; };
 		566673082750194A00208A76 /* forgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566673072750194A00208A76 /* forgotPassViewController.swift */; };
 		567C49142750822A007812A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 567C49132750822A007812A8 /* GoogleService-Info.plist */; };
 		569CF3032731A14C006C2AE0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569CF3022731A14C006C2AE0 /* RegisterViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		302F9D9CF02DE7675045C054 /* Pods-EvaPer3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvaPer3.debug.xcconfig"; path = "Target Support Files/Pods-EvaPer3/Pods-EvaPer3.debug.xcconfig"; sourceTree = "<group>"; };
+		562A3EB727607D41008B5297 /* MenuGoPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGoPlaceViewController.swift; sourceTree = "<group>"; };
 		566673072750194A00208A76 /* forgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotPassViewController.swift; sourceTree = "<group>"; };
 		567C49132750822A007812A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		569CF3022731A14C006C2AE0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				567C49132750822A007812A8 /* GoogleService-Info.plist */,
 				569CF3022731A14C006C2AE0 /* RegisterViewController.swift */,
 				566673072750194A00208A76 /* forgotPassViewController.swift */,
+				562A3EB727607D41008B5297 /* MenuGoPlaceViewController.swift */,
 			);
 			path = EvaPer3;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				566673082750194A00208A76 /* forgotPassViewController.swift in Sources */,
 				569CF3032731A14C006C2AE0 /* RegisterViewController.swift in Sources */,
+				562A3EB827607D41008B5297 /* MenuGoPlaceViewController.swift in Sources */,
 				F278F92527309B1300B3FF6E /* AuthViewController.swift in Sources */,
 				F278F92327309B1300B3FF6E /* AppDelegate.swift in Sources */,
 			);

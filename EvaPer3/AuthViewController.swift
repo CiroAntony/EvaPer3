@@ -29,7 +29,7 @@ class AuthViewController: UIViewController {
         db = Firestore.firestore()
     }
     
-    @IBAction func ingresarButtonAction(_ sender: Any) {
+    @IBAction func ingresarButtonAction(_ sender: MenuGoPlaceViewController) {
         if let email = emailTextField.text {
             if let password = passwordTextField.text {
                 Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
@@ -54,6 +54,5 @@ class AuthViewController: UIViewController {
     
     @IBAction func forgotPassButton_Tapped(_ sender: Any) {
     }
-    
 }
 

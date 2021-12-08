@@ -32,11 +32,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="EvaPer3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="EDs-m5-bTU">
-                                <rect key="frame" x="16" y="104" width="382" height="682"/>
+                                <rect key="frame" x="16" y="16" width="382" height="682"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoPlace!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTX-UV-GHo">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="90"/>
@@ -124,7 +124,7 @@
                                         </state>
                                         <connections>
                                             <action selector="registrarButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pGC-v8-veL"/>
-                                            <segue destination="Rb7-RR-2Jo" kind="modal" id="ZQW-fY-Wjf"/>
+                                            <segue destination="Rb7-RR-2Jo" kind="show" id="8Vo-3p-4GN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -177,6 +177,7 @@
                         <outlet property="emailTextField" destination="Tpy-OL-0Dt" id="PRc-om-ysZ"/>
                         <outlet property="ingresarButton" destination="ljk-pW-qlw" id="IOW-LT-DgU"/>
                         <outlet property="passwordTextField" destination="vCw-3y-zBj" id="3E2-wk-XJw"/>
+                        <outlet property="recuperarButton" destination="zta-P1-7fz" id="oRA-A3-4V1"/>
                         <outlet property="registrarButton" destination="2JU-bw-JLd" id="IHC-WD-WIs"/>
                     </connections>
                 </viewController>
@@ -193,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j6u-7l-VHh">
-                                <rect key="frame" x="16" y="16" width="382" height="460"/>
+                                <rect key="frame" x="16" y="16" width="382" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zv9-M9-XIW">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -244,16 +245,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destino" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vM-M3-LwJ">
-                                        <rect key="frame" x="0.0" y="350" width="382" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="thv-Zz-6r0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDW-1M-GLc">
-                                        <rect key="frame" x="0.0" y="410" width="382" height="50"/>
+                                        <rect key="frame" x="0.0" y="350" width="382" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="KOT-xv-Kex"/>
@@ -280,13 +273,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vsE-Rr-HBe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8Bd-Zo-o87"/>
                     <connections>
                         <outlet property="confirmTextField" destination="aOa-gv-bLF" id="g7C-7Q-Moh"/>
                         <outlet property="emailTextField" destination="vWp-6M-rcC" id="UVS-Zg-xf8"/>
                         <outlet property="lastNameTextField" destination="Zew-Wb-rZa" id="pGv-cY-ih6"/>
                         <outlet property="nameTextField" destination="aYc-Vn-TJl" id="OFm-k4-IzI"/>
                         <outlet property="passwordTextField" destination="6PK-69-XsT" id="8rZ-EJ-Gs9"/>
-                        <outlet property="tipoTextField" destination="4vM-M3-LwJ" id="TUi-9f-3am"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iaN-Yw-dJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -298,11 +291,11 @@
             <objects>
                 <viewController id="aYv-1S-nfR" customClass="forgotPassViewController" customModule="EvaPer3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mcv-4k-ClD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jo6-3G-hpC">
-                                <rect key="frame" x="16" y="104" width="382" height="290"/>
+                                <rect key="frame" x="16" y="16" width="382" height="290"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iI-W8-y7O">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="46"/>
@@ -372,8 +365,30 @@
             </objects>
             <point key="canvasLocation" x="219" y="-362"/>
         </scene>
+        <!--Menu Go Place View Controller-->
+        <scene sceneID="KDV-YO-Dff">
+            <objects>
+                <viewController id="RZg-eA-24y" customClass="MenuGoPlaceViewController" customModule="EvaPer3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YKp-kA-Wip">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AkF-Yb-XW9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="emz-BK-ETg"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="1eG-Og-ZZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRP-hM-wCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="30"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="222" height="302"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1eG-Og-ZZ7"/>
+    </inferredMetricsTieBreakers>
 </document>
