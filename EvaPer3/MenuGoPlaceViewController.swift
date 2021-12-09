@@ -17,6 +17,8 @@ class MenuGoPlaceViewController: UIViewController {
     
     @IBOutlet weak var aprobadosButton: UIButton!
     
+    @IBOutlet weak var perfilButton: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -5,8 +5,17 @@ class forgotPassViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var recuperarButton: UIButton!
+    
     override func viewDidLoad() {
     super.viewDidLoad()
+        
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 13.0
+        
+        recuperarButton.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+        recuperarButton.layer.cornerRadius = 25.0
+        recuperarButton.tintColor = UIColor.black
     }
     
     @IBAction func forgotPassButton_Tapped(_ sender: UIButton) {

@@ -20,6 +20,19 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.cornerRadius = 13.0
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 13.0
+
+        ingresarButton.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+        ingresarButton.layer.cornerRadius = 25.0
+        ingresarButton.tintColor = UIColor.black
+        
+        registrarButton.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+        registrarButton.layer.cornerRadius = 25.0
+        registrarButton.tintColor = UIColor.black
+        
         title = "Login"
         
         Analytics.logEvent("InitScreen", parameters: ["message": "Integracon de Firebase completa"])
