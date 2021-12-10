@@ -47,9 +47,7 @@ class AuthViewController: UIViewController {
             if let password = passwordTextField.text {
                 Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
                     if let _ =  authResult {
-                        let alertController = UIAlertController(title: "Inicio de sesión exitoso", message: "Has iniciado sesión correctamente", preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
-                        self?.present(alertController, animated: true, completion: nil)
+                        self?.performSegue(withIdentifier: "loginToHomeSegue", sender: nil)
                         return
                     } else {
                         let alertController = UIAlertController(title: "Error", message: "Credenciales no existentes", preferredStyle: .alert)

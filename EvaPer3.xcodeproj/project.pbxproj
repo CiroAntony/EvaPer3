@@ -119,6 +119,7 @@
 				F278F91C27309B1300B3FF6E /* Frameworks */,
 				F278F91D27309B1300B3FF6E /* Resources */,
 				9D1DC1F73A508FB19FFF4C05 /* [CP] Embed Pods Frameworks */,
+				4A5891B0D8D453320DB8EB6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +178,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4A5891B0D8D453320DB8EB6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EvaPer3/Pods-EvaPer3-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EvaPer3/Pods-EvaPer3-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EvaPer3/Pods-EvaPer3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		60F0776896561651CB859440 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

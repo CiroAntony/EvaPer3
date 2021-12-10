@@ -93,7 +93,6 @@
                                         </state>
                                         <connections>
                                             <action selector="ingresarButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZaY-hi-ufi"/>
-                                            <segue destination="RZg-eA-24y" kind="show" id="RhZ-Hw-fVz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zta-P1-7fz">
@@ -108,7 +107,7 @@
                                         </state>
                                         <connections>
                                             <action selector="forgotPassButton_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QRe-L5-BsZ"/>
-                                            <segue destination="aYv-1S-nfR" kind="show" id="LHN-PI-Xu9"/>
+                                            <segue destination="aYv-1S-nfR" kind="show" id="38H-L1-VXS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JU-bw-JLd">
@@ -179,6 +178,7 @@
                         <outlet property="passwordTextField" destination="vCw-3y-zBj" id="3E2-wk-XJw"/>
                         <outlet property="recuperarButton" destination="zta-P1-7fz" id="oRA-A3-4V1"/>
                         <outlet property="registrarButton" destination="2JU-bw-JLd" id="IHC-WD-WIs"/>
+                        <segue destination="RZg-eA-24y" kind="show" identifier="loginToHomeSegue" id="PhL-A6-UNp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -438,11 +438,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccionar Conductor" textAlignment="natural" minimumFontSize="17" background="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BvJ-Xz-t1J">
-                                <rect key="frame" x="16" y="211" width="382" height="50"/>
+                                <rect key="frame" x="16" y="117" width="382" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-qH-vTt" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="314" width="382" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="deE-z9-ldV"/>

@@ -4,7 +4,6 @@
 target 'EvaPer3' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
   # Pods for EvaPer3
 
  pod 'Firebase/Analytics'
@@ -13,5 +12,6 @@ target 'EvaPer3' do
  pod 'Alamofire'
  pod 'SwiftyJSON'
  pod 'AlamofireImage'
+ pod 'GoogleMaps'
   
 end
